@@ -1,0 +1,162 @@
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(13, 119, 62, 0.1);
+  cursor: pointer;
+}
+
+.street-search-container {
+  position: relative;
+}
+
+/* Styles for street search autocomplete */
+.dropdown-menu {
+  width: 100%;
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 1050;
+}
+
+.dropdown-item {
+  white-space: normal;
+  word-break: break-word;
+  padding: 0.5rem 1rem;
+}
+
+/* Loading spinner positioning */
+.spinner-position {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+/* Generate Form Styles */
+.generate-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Custom Breadcrumb Styles */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.breadcrumb-item {
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '›'; /* Custom separator */
+  color: #6c757d;
+  font-size: 1.2rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.breadcrumb-item a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  color: #6c757d;
+}
+
+.modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.event-date {
+  font-weight: 500;
+  color: #495057;
+}
+
+.event-type {
+  color: #6c757d;
+}
+
+.no-events {
+  text-align: center;
+  color: #6c757d;
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

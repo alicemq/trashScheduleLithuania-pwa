@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Handle calendar.ics requests
+  RewriteRule ^calendar\.ics$ feed.php [L]
+
+  # Handle all other routes through Vue router
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Set correct content type for calendar files
+<FilesMatch "^feed/ical">
+  Header set Content-Type "text/calendar;charset=utf-8"
+</FilesMatch>
